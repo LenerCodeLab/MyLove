@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Y&L - Nuestro Corazon en Codigo</title>
+  <link rel="icon" href="img/flores-amarillas.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="petal-layer" id="petalLayer" aria-hidden="true"></div>
+  <a class="back-home" href="../../index.html">← Volver a nuestro mundo</a>
+
+  <section class="welcome" id="welcome">
+    <div class="welcome-card">
+      <p class="eyebrow">Para mi persona favorita...</p>
+      <h1>Yenni ♥</h1>
+      <svg class="ecg" viewBox="0 0 620 120" aria-hidden="true">
+        <path d="M4 70 H110 L132 70 L148 36 L171 94 L198 70 H252 C272 22 342 22 310 86 C336 44 400 44 374 88 H430 L452 70 H520 L544 50 L574 70 H616" />
+        <text x="270" y="116">Y ♥ L</text>
+      </svg>
+      <p>He preparado algo para recordarte lo orgulloso que estoy de ti.</p>
+      <button class="primary-button" id="enterButton" type="button">Entrar a nuestro pequeno mundo ♥</button>
+    </div>
+  </section>
+
+  <nav class="progress-nav" id="progressNav" aria-label="Navegacion principal">
+    <a href="#hero">Inicio</a>
+    <a href="#examenes">Examenes</a>
+    <a href="#flores">Flores</a>
+    <a href="#galeria">Recuerdos</a>
+    <a href="#cartas">Cartas</a>
+    <a href="#juegos">Juegos</a>
+    <a href="#final">Final</a>
+  </nav>
+
+  <main id="mainContent" hidden>
+    <section class="section hero" id="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Y&L - Nuestro Corazon en Codigo</p>
+        <h2>Estoy muy orgulloso de ti, Yenni ♥</h2>
+        <p>Se cuanto esfuerzo, tiempo, cansancio y dedicacion hay detras de cada examen. Independientemente de cualquier nota, quiero que recuerdes algo: admiro muchisimo todo lo que haces para acercarte a tus suenos.</p>
+        <blockquote>Algun dia seras una gran doctora, pero desde hace mucho tiempo ya eres la doctora favorita de mi corazon.</blockquote>
+        <strong>Con todo mi amor,<br />Lener ♥</strong>
+      </div>
+      <div class="hero-photos" id="heroPhotos"></div>
+    </section>
+
+    <section class="section exam-section" id="examenes">
+      <div class="section-heading">
+        <p class="eyebrow">Felicidades por tus examenes</p>
+        <h2>Lo estas haciendo increible 🩺♥</h2>
+        <p>Todo eso te esta acercando a la profesional que suenas ser.</p>
+      </div>
+      <div class="effort-grid" id="examCards"></div>
+      <article class="medical-card">
+        <svg class="ecg" viewBox="0 0 620 120" aria-hidden="true"><path d="M4 70 H110 L132 70 L148 36 L171 94 L198 70 H252 C272 22 342 22 310 86 C336 44 400 44 374 88 H430 L452 70 H520 L544 50 L574 70 H616" /></svg>
+        <dl>
+          <div><dt>Paciente</dt><dd>Yenni ♥</dd></div>
+          <div><dt>Diagnostico</dt><dd>Una mujer increiblemente perseverante.</dd></div>
+          <div><dt>Pronostico</dt><dd>Un futuro enorme.</dd></div>
+          <div><dt>Tratamiento</dt><dd>Mucho amor, descanso, abrazos y seguir creyendo en ella misma.</dd></div>
+          <div><dt>Medico responsable del cuidado del corazon</dt><dd>Lener ♥</dd></div>
+        </dl>
+      </article>
+    </section>
+
+    <section class="section yellow-flowers" id="flores">
+      <div class="flower-card">
+        <p class="eyebrow">21 de septiembre</p>
+        <h2>Para ti, Yenni 🌻</h2>
+        <p>Porque el 21 no queria regalarte solamente flores...</p>
+        <p>Queria regalarte un pequeno lugar donde pudieras recordar cuanto te amo.</p>
+        <div class="digital-bouquet" id="bouquet" aria-hidden="true"></div>
+        <blockquote>Las flores algun dia pueden marchitarse, pero espero que cada vez que regreses aqui recuerdes lo importante que eres para mi.</blockquote>
+        <strong>Lener ♥</strong>
+        <button class="flower-button" id="yellowButton" type="button">🌻 Tengo algo amarillo para ti 🌻</button>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="galeria">
+      <div class="section-heading">
+        <p class="eyebrow">Album Y&L</p>
+        <h2>Pequenos momentos, grandes recuerdos ♥</h2>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+
+    <section class="section letters-section" id="cartas">
+      <div class="section-heading">
+        <p class="eyebrow">Mensajes para abrir despacito</p>
+        <h2>Cartas para ti 💌</h2>
+      </div>
+      <div class="letters-grid" id="lettersGrid"></div>
+    </section>
+
+    <section class="section games-section" id="juegos">
+      <div class="section-heading">
+        <p class="eyebrow">Mini juegos</p>
+        <h2>Jugar tambien es recordar</h2>
+      </div>
+      <div class="games-grid">
+        <article class="game-card">
+          <h3>Arma nuestros recuerdos 🧩♥</h3>
+          <div class="game-controls">
+            <select id="puzzleImage"></select>
+            <select id="puzzleSize">
+              <option value="3">Facil 3 x 3</option>
+              <option value="4">Medio 4 x 4</option>
+              <option value="5">Dificil 5 x 5</option>
+              <option value="6">Opcional 6 x 6</option>
+            </select>
+            <button id="puzzleReset" type="button">Reiniciar</button>
+          </div>
+          <p id="puzzleStats">Movimientos: 0 · Tiempo: 0s</p>
+          <div class="puzzle-board" id="puzzleBoard"></div>
+          <strong class="game-success" id="puzzleMessage"></strong>
+        </article>
+        <article class="game-card">
+          <h3>Memoria de nuestro amor ♥</h3>
+          <button id="memoryReset" type="button">Reiniciar</button>
+          <p id="memoryStats">Movimientos: 0 · Tiempo: 0s</p>
+          <div class="memory-board" id="memoryBoard"></div>
+          <strong class="game-success" id="memoryMessage"></strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="section monitor-section">
+      <div class="monitor">
+        <h2>Analizando signos vitales del corazon...</h2>
+        <svg class="ecg" viewBox="0 0 620 120" aria-hidden="true"><path d="M4 70 H110 L132 70 L148 36 L171 94 L198 70 H252 C272 22 342 22 310 86 C336 44 400 44 374 88 H430 L452 70 H520 L544 50 L574 70 H616" /></svg>
+        <div class="vitals-grid">
+          <article><span>Frecuencia cardiaca</span><strong>Aumenta cuando Yenni aparece</strong></article>
+          <article><span>Saturacion de amor</span><strong>100%</strong></article>
+          <article><span>Compatibilidad Y + L</span><strong>∞</strong></article>
+          <article><span>Diagnostico final</span><strong>Enamorado de Yenni de forma irreversible.</strong></article>
+          <article><span>Tratamiento</span><strong>Pasar toda la vida juntos.</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section heart-section">
+      <button class="anatomical-heart" id="heartButton" type="button" aria-label="Corazon interactivo">♥</button>
+      <h2 id="heartMessage">Toca el corazon</h2>
+      <p>Late suave, pero late por ti.</p>
+    </section>
+
+    <section class="section timeline-section">
+      <div class="section-heading">
+        <p class="eyebrow">Editable en content.js</p>
+        <h2>Nuestra historia</h2>
+      </div>
+      <div class="storyline" id="timelineGrid"></div>
+    </section>
+
+    <section class="section future-section">
+      <div class="section-heading">
+        <p class="eyebrow">Nuestro futuro</p>
+        <h2>Todo lo que sueno vivir contigo</h2>
+      </div>
+      <div class="future-grid" id="futureGrid"></div>
+    </section>
+
+    <section class="section secret-section">
+      <button class="secret-trigger" id="secretButton" type="button">Y + L</button>
+      <article class="secret-card" id="secretCard" hidden>
+        <p class="eyebrow">Encontraste mi secreto...</p>
+        <h2>Pero en realidad nunca fue secreto.</h2>
+        <p>Quiero una vida contigo.</p>
+        <strong>Lener ♥</strong>
+      </article>
+    </section>
+
+    <section class="section constellation">
+      <div class="stars" id="stars" aria-hidden="true"></div>
+      <h2>Y ♥ L</h2>
+      <p>Entre millones de personas, tuve la suerte de encontrarte.</p>
+    </section>
+
+    <section class="section counter-section">
+      <p class="eyebrow">Configurable</p>
+      <h2>Llevamos...</h2>
+      <div class="counter-grid" id="counterGrid"></div>
+      <p>Y todavia siento que esto recien empieza.</p>
+    </section>
+
+    <section class="section hidden-details">
+      <p class="eyebrow">Detalles ocultos</p>
+      <h2>Pequenas dosis de amor</h2>
+      <div class="detail-buttons">
+        <button data-detail="Escuchando... Solo se escucha: Yenni... Yenni... Yenni..." type="button">🩺</button>
+        <button data-detail="Dosis recomendada: 1 abrazo de Yenni cada 8 horas." type="button">💊</button>
+        <button data-detail="Efecto secundario: sonreir pensando en ti." type="button">🌻</button>
+      </div>
+      <p id="detailMessage">Toca un detalle pequeno</p>
+    </section>
+
+    <section class="section final-section" id="final">
+      <h2>Yenni...</h2>
+      <p>Quizas esta pagina tenga un final.</p>
+      <p>Pero lo que quiero construir contigo no.</p>
+      <p>Gracias por existir, por esforzarte, por ensenarme, por acompanarme y por dejarme formar parte de tu vida.</p>
+      <p>Estoy orgulloso de la estudiante que eres, de la futura profesional que seras y, sobre todo, de la mujer que eres.</p>
+      <h3>Te amo.</h3>
+      <strong>Lener ♥</strong>
+      <span>Y & L</span>
+      <em>Continuara...</em>
+    </section>
+  </main>
+
+  <div class="music-player">
+    <audio id="music" src="audios/nuestra-cancion.mp3" loop preload="auto"></audio>
+    <button id="musicButton" type="button" aria-label="Reproducir musica">♪</button>
+    <input id="volumeControl" type="range" min="0" max="1" step="0.05" aria-label="Volumen" />
+  </div>
+
+  <div class="modal" id="photoModal" hidden>
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Cerrar">×</button>
+      <img id="modalImage" alt="" />
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <div class="modal yellow-modal" id="yellowModal" hidden>
+    <div class="modal-card yellow-modal-card">
+      <button class="modal-close" id="yellowModalClose" type="button" aria-label="Cerrar">×</button>
+      <span class="yellow-glow yellow-glow-one" aria-hidden="true"></span>
+      <span class="yellow-glow yellow-glow-two" aria-hidden="true"></span>
+      <p class="eyebrow">Un regalo floral para ti</p>
+      <h2>Para ti, Yenni</h2>
+      <div class="yellow-bouquet" aria-hidden="true">
+        <span class="sparkle sparkle-one">✦</span>
+        <span class="sparkle sparkle-two">✧</span>
+        <span class="heart heart-one">♥</span>
+        <span class="heart heart-two">♥</span>
+        <div class="bouquet-wrap">
+          <span class="paper paper-left"></span>
+          <span class="paper paper-right"></span>
+          <span class="leaf l4">❧</span>
+          <span class="leaf l5">❧</span>
+          <span class="filler filler-one">✿</span>
+          <span class="filler filler-two">✿</span>
+          <span class="filler filler-three">✿</span>
+          <span class="filler filler-four">✿</span>
+          <span class="filler filler-five">✿</span>
+          <span class="filler filler-six">✿</span>
+          <span class="filler filler-seven">✿</span>
+          <span class="flower back-flower tulip f2">🌷</span>
+          <span class="flower back-flower tulip f3">🌷</span>
+          <span class="flower back-flower rose f9">🌹</span>
+          <span class="flower back-flower tulip f10">🌷</span>
+          <span class="flower mid-flower rose f4">🌹</span>
+          <span class="flower mid-flower sunflower f1">🌻</span>
+          <span class="flower mid-flower rose f7">🌹</span>
+          <span class="flower mid-flower rose f11">🌹</span>
+          <span class="flower front-flower tulip f6">🌷</span>
+          <span class="flower front-flower sunflower f8">🌻</span>
+          <span class="flower front-flower sunflower f5">🌻</span>
+          <span class="flower front-flower rose f12">🌹</span>
+          <span class="leaf l1">❧</span>
+          <span class="leaf l2">❧</span>
+          <span class="leaf l3">❧</span>
+          <span class="stem s1"></span>
+          <span class="stem s2"></span>
+          <span class="stem s3"></span>
+          <span class="stem s4"></span>
+          <span class="stem s5"></span>
+          <span class="paper paper-front"></span>
+          <span class="bow bow-left"></span>
+          <span class="bow bow-right"></span>
+          <span class="ribbon">Y&L</span>
+        </div>
+      </div>
+      <blockquote>
+        “Para ti, Yenni, con todo mi amor. Porque en cada girasol veo tu luz, en cada rosa mi ternura por ti, y en cada tulipan la dulzura de todo lo que sueno a tu lado.”
+      </blockquote>
+      <strong>Con amor, Lener ♥</strong>
+      <button class="primary-button yellow-return" id="yellowReturn" type="button">Cerrar este regalo</button>
+    </div>
+  </div>
+
+  <script src="js/content.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/letters.js"></script>
+  <script src="js/puzzle.js"></script>
+  <script src="js/memory.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

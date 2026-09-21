@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Varela Round", "Quicksand", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  background: url("../../img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  overflow-x: hidden;
+  padding: 28px 18px 40px;
+}
+
+.back-home {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(72, 17, 38, 0.34);
+  box-shadow: 0 12px 28px rgba(18, 4, 12, 0.26);
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.back-home:hover {
+  transform: translateY(-2px);
+  background: rgba(72, 17, 38, 0.48);
+}
+
+.postcard {
+  width: 800px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.101);
+
+  margin: 0 auto;
+  border-radius: 2%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3em;
+  box-shadow: 0.8em 0.8em 15px rgba(0, 0, 0, 0.3);
+  -ms-transform: rotate(2.5deg);
+  /* IE 9 */
+  -webkit-transform: rotate(2.5deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(2.5deg);
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.postcard1 {
+  width: 800px;
+  height: 500px;
+  background: #f594b862;
+  position: absolute;
+  left: 24%;
+  -webkit-filter: blur(2px);
+  z-index: -1;
+  margin: 0 auto;
+  border-radius: 2%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3em;
+  box-shadow: 0.8em 0.8em 15px rgba(0, 0, 0, 0.3);
+  -ms-transform: rotate(2.5deg);
+  /* IE 9 */
+  -webkit-transform: rotate(2.5deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(2.5deg);
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4.5em;
+  color: #fdfdfd;
+  margin-bottom: 5px;
+}
+
+/*animation*/
+.postcard:hover,
+.postcard:active,
+.postcard:focus {
+  -ms-transform: rotate(0deg);
+  /* IE 9 */
+  -webkit-transform: rotate(0deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.mail_stamp {
+  width: 100px;
+  float: right;
+}
+
+.push {
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+}
+
+/*footer*/
+footer {
+  margin: 2em auto;
+  text-align: center;
+  font-family: "Varela Round", "Quicksand", sans-serif;
+  color: white;
+}
+
+footer p {
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+
+p span {
+  font-size: 30px;
+  font-weight: 600;
+  text-shadow: 0 0 20px rgb(255, 255, 255);
+  color: #800020;
+}
+
+p {
+  font-size: 22px;
+  font-family: cursive;
+  font-weight: 540;
+}
+
+.ullu {
+  font-size: 25px;
+
+  text-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+@media (max-width: 900px) {
+  .postcard,
+  .postcard1 {
+    width: min(92vw, 800px);
+    height: auto;
+    min-height: 500px;
+  }
+
+  .postcard1 {
+    left: 4vw;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .back-home {
+    top: 12px;
+    left: 12px;
+    min-height: 38px;
+    padding: 0 12px;
+    font-size: 0.76rem;
+  }
+
+  h1 {
+    font-size: 3.2em;
+  }
+
+  .postcard {
+    display: block;
+    padding: 1.5em;
+    transform: rotate(1.2deg);
+  }
+
+  .postcard1 {
+    min-height: 560px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  p span {
+    font-size: 25px;
+  }
+}

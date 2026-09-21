@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuestro primer mes</title>
+  <link rel="icon" href="../../img/flowers.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../../styles/aniversario/main.css" />
+</head>
+
+<body>
+  <div class="petal-layer" aria-hidden="true"></div>
+  <a class="back-home" href="../../index.html" aria-label="Volver a Nuestro Mundo">
+    &larr; Volver a Nuestro Mundo
+  </a>
+
+  <header class="cover" id="cover">
+    <div class="cover__decor cover__decor--left" aria-hidden="true">
+      <span>&#10047;</span>
+      <span>&hearts;</span>
+      <span>&#10022;</span>
+    </div>
+    <div class="cover__content">
+      <p class="eyebrow">Primer mes de enamorados</p>
+      <h1>30 dias de nosotros <span>&hearts;</span></h1>
+      <p class="cover__copy">
+        Un mes lleno de recuerdos, carino y momentos que quiero guardar contigo.
+      </p>
+      <button class="start-button" id="startButton" type="button">
+        Comenzar nuestro recuerdo &hearts;
+      </button>
+    </div>
+    <div class="cover__decor cover__decor--right" aria-hidden="true">
+      <span>&#10022;</span>
+      <span>&#127803;</span>
+      <span>&hearts;</span>
+    </div>
+  </header>
+
+  <main class="story" id="story" aria-live="polite">
+    <section class="timeline-intro">
+      <p>Primer mes</p>
+      <h2>Un mes que quiero recordar contigo</h2>
+      <p class="timeline-intro__copy">
+        Hace un mes comenzo algo muy especial entre nosotros. Y en estos 30 dias hemos creado recuerdos, sonrisas y
+        momentos que quiero guardar para siempre.
+      </p>
+    </section>
+
+    <div class="timeline" id="timeline"></div>
+
+    <section class="final-card-section" id="finalCardSection">
+      <div class="final-envelope" data-final-envelope>
+        <button class="envelope envelope--large" type="button" aria-expanded="false">
+          <span class="envelope__flap"></span>
+          <span class="envelope__heart">&hearts;</span>
+          <span class="envelope__label">Carta final del primer mes</span>
+        </button>
+        <article class="letter final-letter" aria-hidden="true">
+          <p class="letter__kicker">Nuestro primer mes</p>
+          <h2>Mi carta para ti &hearts;</h2>
+          <p>
+            Amor, este primer mes contigo se siente como un regalo bonito. Gracias por cada risa, cada detalle, cada
+            conversacion y cada momento que hizo que estos 30 dias se quedaran guardados en mi corazon.
+          </p>
+          <p>
+            Me emociona mirar todo lo que vivimos en tan poquito tiempo, porque me hace pensar en todo lo lindo que aun
+            podemos construir juntos.
+          </p>
+          <strong>Y esto recien comienza... &hearts;</strong>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="progress" aria-hidden="true">
+    <span id="progressFill"></span>
+  </div>
+
+  <button class="music-button" id="musicButton" type="button" aria-label="Pausar musica">
+    &#9835;
+  </button>
+
+  <audio id="music" src="../../audios/Floricienta.mp3" loop preload="auto"></audio>
+  <script src="../../scripts/aniversario/main.js"></script>
+</body>
+
+</html>

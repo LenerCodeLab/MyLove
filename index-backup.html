@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyLove</title>
+  <link rel="icon" href="img/flowers.png" type="image/x-icon" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      color: #44212d;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(255, 228, 236, 0.9), transparent 32%),
+        radial-gradient(circle at 88% 18%, rgba(255, 220, 91, 0.28), transparent 30%),
+        linear-gradient(135deg, #fff8fb, #fff9ee 52%, #ffe5ef);
+    }
+
+    main {
+      width: min(980px, 100%);
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.8rem, 9vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    p {
+      max-width: 620px;
+      margin: 0 0 28px;
+      color: #805d66;
+      line-height: 1.7;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      min-height: 220px;
+      display: grid;
+      align-content: end;
+      gap: 12px;
+      padding: 24px;
+      border: 1px solid rgba(211, 160, 79, 0.24);
+      border-radius: 10px;
+      color: #44212d;
+      text-decoration: none;
+      background: rgba(255, 253, 248, 0.74);
+      box-shadow: 0 22px 60px rgba(107, 47, 62, 0.16);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 28px 70px rgba(107, 47, 62, 0.22);
+    }
+
+    .card strong {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.5rem, 4vw, 2.3rem);
+      line-height: 1.05;
+    }
+
+    .card span {
+      color: #8a6470;
+      line-height: 1.5;
+    }
+
+    .card--main {
+      background:
+        radial-gradient(circle at 80% 18%, rgba(246, 200, 66, 0.32), transparent 34%),
+        linear-gradient(145deg, rgba(255, 253, 248, 0.94), rgba(255, 227, 236, 0.84));
+    }
+
+    @media (max-width: 720px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>MyLove</h1>
+    <p>Un pequeño lugar para guardar nuestras sorpresas, recuerdos y prototipos romanticos.</p>
+
+    <div class="cards">
+      <a class="card card--main" href="./prototipos/CorazonCodigo/index.html">
+        <strong>Y&amp;L — Nuestro Corazón en Código ❤️</strong>
+        <span>Romance, medicina, flores amarillas, cartas, juegos y recuerdos para Yenni.</span>
+      </a>
+
+      <a class="card" href="./prototipos/Aniversario/index.html">
+        <strong>Nuestro primer mes</strong>
+        <span>Recorrido romantico con fotos, cartas y musica.</span>
+      </a>
+    </div>
+  </main>
+</body>
+
+</html>

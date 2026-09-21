@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flores Universo Y&L</title>
+  <link rel="stylesheet" href="../../styles/flores-universo-yl/main.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <main class="universe" id="universe">
+    <div class="three-stage" id="threeStage" aria-label="Universo 3D de flores amarillas para Yenni"></div>
+    <div class="loading" id="loading">
+      <span></span>
+      <p>Entrando al universo floral...</p>
+    </div>
+
+    <section class="intro-overlay" id="introOverlay">
+      <div class="intro-sunflower-rain" aria-hidden="true"></div>
+      <div class="intro-card">
+        <p>Flores amarillas para mi amor</p>
+        <h1>Yenni,<br />mi universo florece contigo</h1>
+        <span>Prepare un pequeno universo solo para ti.</span>
+        <button class="enter-button" id="enterUniverse" type="button">Entrar a nuestro universo 🌻</button>
+      </div>
+    </section>
+
+    <header class="mini-brand" id="miniBrand">
+      <strong>Y ♥ L</strong>
+    </header>
+
+    <a class="back-home" href="../../index.html">← Volver a Nuestro Mundo</a>
+
+    <h2 class="universe-title">Te Amo Yenni</h2>
+
+    <div class="floating-actions">
+      <button class="letter-button" id="openLetter" type="button" aria-label="Abrir carta">💌 <span>Carta</span></button>
+    </div>
+
+    <header class="hero-copy" hidden>
+      <p>Flores amarillas para mi amor</p>
+      <h1>Yenni, mi universo florece contigo</h1>
+    </header>
+  </main>
+
+  <div class="controls">
+    <button class="music-button" id="musicToggle" type="button" aria-label="Reproducir musica">
+      <span></span>
+      <strong>♪</strong>
+    </button>
+  </div>
+
+  <div class="hint">Arrastra para explorar · rueda o pinch para acercarte</div>
+
+  <div class="modal" id="letterModal" hidden>
+    <article class="modal-card">
+      <button class="modal-close" id="closeLetter" type="button" aria-label="Cerrar carta">×</button>
+      <p>Para ti, Yenni</p>
+      <h2 id="letterTitle">Mi luz amarilla</h2>
+      <blockquote id="letterText"></blockquote>
+      <strong id="letterSignature">Con amor, Lener ♥</strong>
+    </article>
+  </div>
+
+  <audio id="music" preload="metadata" loop></audio>
+
+  <script src="../../scripts/flores-universo-yl/config.js"></script>
+  <script src="../../scripts/flores-universo-yl/modal.js"></script>
+  <script type="module" src="../../scripts/flores-universo-yl/main.js"></script>
+</body>
+
+</html>

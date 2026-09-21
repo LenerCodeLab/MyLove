@@ -3,7 +3,7 @@ const reproductor = document.getElementById("musica");
 const loveWords = document.getElementById("loveWords");
 const finalLoveMessage = document.getElementById("finalLoveMessage");
 reproductor.volume = 0.04;
-reproductor.src = "../audios/cancion1.mp3";
+reproductor.src = "../audios/Flores Amarillas para Yenni.mp3";
 
 const palabras = [
   "Mi Amor",

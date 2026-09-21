@@ -36,8 +36,8 @@ btnEnviar.addEventListener("click", () => {
 });
 
 const canciones = [
-  `${assetPrefix}audios/cancion1.mp3`,
-  `${assetPrefix}audios/cancion2.mp3`
+  `${assetPrefix}audios/Canción para Yenni.mp3`,
+  `${assetPrefix}audios/Te voy a amar-Axel (LETRA).mp3`
 ];
 
 let indiceActual = 0;

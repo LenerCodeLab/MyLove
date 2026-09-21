@@ -4,29 +4,294 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nuestro primer mes</title>
+  <title>Y&L - Nuestro Mundo</title>
   <link rel="icon" href="img/flowers.png" type="image/x-icon" />
-  <style>
-    html,
-    body {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      overflow: hidden;
-      background: #fff7f9;
-    }
-
-    iframe {
-      display: block;
-      width: 100vw;
-      height: 100vh;
-      border: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="styles/main.css" />
 </head>
 
-<body>
-  <iframe src="prototipos/Aniversario/index.html" title="Nuestro primer mes"></iframe>
+<body class="app-loading">
+  <div class="app-loader" id="appLoader" role="status" aria-live="polite">
+    <div class="loader-hearts" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <div class="loader-card">
+      <p>Y <span>♥</span> L</p>
+      <div class="loader-heart" aria-hidden="true">♥</div>
+      <div class="loader-ecg" aria-hidden="true">
+        <i></i>
+      </div>
+      <strong>Preparando nuestro pequeno mundo...</strong>
+      <div class="loader-progress" aria-hidden="true">
+        <span id="loaderProgress"></span>
+      </div>
+      <small id="loaderPercent">0%</small>
+    </div>
+  </div>
+
+  <canvas class="heart-rain" id="heartRain" aria-hidden="true"></canvas>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#inicio" aria-label="Inicio Y y L">Y <span>♥</span> L</a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="main-nav" id="mainNav" aria-label="Navegacion principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#musica">Musica</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#videos">Videos</a>
+      <a href="#detalles">Detalles</a>
+      <a href="#historia">Nuestra historia</a>
+      <a href="#cartas">Cartas</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="inicio">
+      <div class="hero-media" aria-hidden="true">
+        <img src="img/Amor1.jpeg" alt="" fetchpriority="high" decoding="async" />
+      </div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Yenni & Lener</p>
+        <h1>Y <span>♥</span> L</h1>
+        <h2>Nuestro pequeno mundo</h2>
+        <p>
+          Todo lo que amo de nosotros, guardado en un solo lugar:
+          recuerdos, canciones, detalles y amor.
+        </p>
+        <a class="primary-button" href="#recuerdos">Entrar a nuestros recuerdos ♥</a>
+      </div>
+      <div class="hero-note reveal" aria-label="Frase romantica">
+        <strong>Yenni & Lener</strong>
+        <span>Nuestro pequeno mundo, hecho de recuerdos, canciones y amor.</span>
+      </div>
+    </section>
+
+    <section class="section intro-panel" id="recuerdos">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Nuestro hogar digital</p>
+        <h2>Un lugar para volver a nosotros</h2>
+        <span>
+          Esta primera version deja lista la base visual para nuestra musica,
+          fotos, videos, cartas, detalles y futuras sorpresas.
+        </span>
+      </div>
+      <div class="memory-grid">
+        <article class="memory-card reveal">
+          <strong>Musica</strong>
+          <p>Canciones que nos recuerdan lo bonito que estamos construyendo.</p>
+        </article>
+        <article class="memory-card reveal">
+          <strong>Fotos</strong>
+          <p>Instantes pequenos que se sienten enormes cuando los vuelvo a mirar.</p>
+        </article>
+        <article class="memory-card reveal">
+          <strong>Detalles</strong>
+          <p>Proyectos, cartas y mundos hechos con calma, ternura y mucho amor.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section music-section" id="musica">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Nuestra musica</p>
+        <h2>Canciones que hablan de nosotros</h2>
+        <span>
+          Aqui prepararemos un album especial con las canciones que acompanan
+          nuestra historia.
+        </span>
+      </div>
+      <div class="music-album reveal" id="musicAlbum">
+        <article class="music-player" aria-label="Reproductor romantico Y y L">
+          <div class="cover-shell">
+            <img id="songCover" src="img/Amor1.jpeg" alt="Portada de la cancion actual" loading="lazy" decoding="async" />
+            <span class="play-glow" aria-hidden="true"></span>
+          </div>
+
+          <div class="song-info">
+            <p class="player-kicker">Album Y&L</p>
+            <h3 id="songTitle">Flores Amarillas para Yenni</h3>
+            <span id="songArtist">Yenni & Lener</span>
+            <blockquote id="songMessage">
+              Esta cancion guarda un pedacito de todo lo bonito que siento por ti.
+            </blockquote>
+          </div>
+
+          <div class="visualizer" id="visualizer" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+
+          <div class="player-controls">
+            <button class="icon-button" id="prevSong" type="button" aria-label="Cancion anterior">‹</button>
+            <button class="play-button" id="playSong" type="button" aria-label="Reproducir cancion">▶</button>
+            <button class="icon-button" id="nextSong" type="button" aria-label="Siguiente cancion">›</button>
+          </div>
+
+          <div class="progress-wrap">
+            <span id="currentTime">0:00</span>
+            <input id="songProgress" type="range" min="0" max="100" value="0" aria-label="Progreso de la cancion" />
+            <span id="songDuration">0:00</span>
+          </div>
+
+          <div class="player-options">
+            <label>
+              Volumen
+              <input id="songVolume" type="range" min="0" max="1" step="0.01" value="0.75" />
+            </label>
+            <button class="option-button" id="shuffleSong" type="button" aria-pressed="false">Aleatorio</button>
+            <button class="option-button is-active" id="repeatSong" type="button" aria-pressed="true">Repetir album</button>
+          </div>
+        </article>
+
+        <aside class="song-list-card" aria-label="Lista de canciones del album">
+          <div class="album-heading">
+            <p>Lista del album</p>
+            <strong id="playingState">Listo para reproducir</strong>
+          </div>
+          <div class="song-list" id="songList"></div>
+        </aside>
+      </div>
+      <audio id="ylAudio" preload="none"></audio>
+    </section>
+
+    <section class="section" id="fotos">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Fotos</p>
+        <h2>Momentos que quiero guardar para siempre</h2>
+        <span>Un album romantico con pequenos pedazos de nosotros, para volver a mirarlos con calma.</span>
+      </div>
+
+      <div class="gallery-filters reveal" id="galleryFilters" aria-label="Filtros del album de fotos"></div>
+      <div class="photo-album" id="photoAlbum" aria-live="polite"></div>
+
+      <div class="gallery-modal" id="galleryModal" hidden>
+        <article class="gallery-dialog" role="dialog" aria-modal="true" aria-labelledby="galleryTitle">
+          <button class="gallery-close" id="galleryClose" type="button" aria-label="Cerrar fotografia">×</button>
+          <button class="gallery-arrow gallery-arrow--prev" id="galleryPrev" type="button" aria-label="Fotografia anterior">‹</button>
+          <figure>
+            <img id="galleryImage" src="img/Amor1.jpeg" alt="" decoding="async" />
+          </figure>
+          <div class="gallery-copy">
+            <p id="galleryDate">Y & L</p>
+            <h3 id="galleryTitle">Nuestro recuerdo</h3>
+            <span id="galleryPlace">Nuestro mundo</span>
+            <blockquote id="galleryMessage"></blockquote>
+          </div>
+          <button class="gallery-arrow gallery-arrow--next" id="galleryNext" type="button" aria-label="Siguiente fotografia">›</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="videos">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Videos</p>
+        <h2>Momentos en movimiento</h2>
+        <span>Un album cinematografico con pequenos fragmentos de nuestra historia.</span>
+      </div>
+      <div class="video-cinema reveal" id="videoCinema" aria-live="polite"></div>
+
+      <div class="video-modal" id="videoModal" hidden>
+        <article class="video-dialog" role="dialog" aria-modal="true" aria-labelledby="videoTitle">
+          <button class="video-close" id="videoClose" type="button" aria-label="Cerrar video">×</button>
+          <button class="video-arrow video-arrow--prev" id="videoPrev" type="button" aria-label="Video anterior">‹</button>
+          <div class="video-screen">
+            <video id="modalVideo" controls playsinline preload="none"></video>
+          </div>
+          <div class="video-copy">
+            <p id="videoDate">Y & L</p>
+            <h3 id="videoTitle">Nuestro video</h3>
+            <span id="videoCategory">Recuerdo</span>
+            <blockquote id="videoMessage"></blockquote>
+          </div>
+          <button class="video-arrow video-arrow--next" id="videoNext" type="button" aria-label="Siguiente video">›</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="detalles">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Detalles</p>
+        <h2>Detalles que hice para ti</h2>
+        <span>
+          Un museo romantico para volver a abrir los regalos, experiencias y pequenos mundos
+          que he creado para ti.
+        </span>
+      </div>
+      <div class="details-filters reveal" id="detailsFilters" aria-label="Filtros del museo de detalles"></div>
+      <div class="details-museum" id="detailsMuseum" aria-live="polite"></div>
+      <div class="details-grid details-grid--legacy" hidden>
+        <article class="detail-card reveal">
+          <img src="img/RAMOGIRASOL.png" alt="Ramo de girasoles" loading="lazy" decoding="async" />
+          <div>
+            <time>Pronto</time>
+            <h3>Flores Universo Y&L</h3>
+            <p>Un pequeno universo dorado con flores, cartas y luz para Yenni.</p>
+            <button type="button" disabled>Volver a verlo ♥</button>
+          </div>
+        </article>
+        <article class="detail-card reveal">
+          <img src="img/CORAZON Y&L.png" alt="Corazon Y y L" loading="lazy" decoding="async" />
+          <div>
+            <time>Pronto</time>
+            <h3>Nuestro Corazon en Codigo</h3>
+            <p>Romance, medicina, juegos, cartas y recuerdos para celebrar lo nuestro.</p>
+            <button type="button" disabled>Volver a verlo ♥</button>
+          </div>
+        </article>
+        <article class="detail-card reveal">
+          <img src="img/RAMOROSASYTULIPANES.png" alt="Ramo romantico" loading="lazy" decoding="async" />
+          <div>
+            <time>Pronto</time>
+            <h3>Aniversario</h3>
+            <p>Una vista especial para guardar fechas, fotos y palabras importantes.</p>
+            <button type="button" disabled>Volver a verlo ♥</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="historia">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Historia</p>
+        <h2>Nuestra historia</h2>
+        <span>Un recorrido romantico por los recuerdos que ya guardamos y los capitulos que seguiremos escribiendo.</span>
+      </div>
+      <div class="story-timeline" id="storyTimeline" aria-live="polite"></div>
+    </section>
+
+    <section class="section" id="cartas">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Cartas</p>
+        <h2>Cartas para ti</h2>
+        <span>Una cajita digital de cartas para abrir cuando necesites leer mi amor con calma.</span>
+      </div>
+      <div class="letters-box" id="lettersBox" aria-live="polite"></div>
+
+      <div class="letter-modal" id="letterModal" hidden>
+        <article class="letter-dialog" role="dialog" aria-modal="true" aria-labelledby="letterModalTitle">
+          <button class="letter-close" id="letterClose" type="button" aria-label="Cerrar carta">×</button>
+          <div class="letter-paper">
+            <span class="letter-detail" id="letterModalIcon" aria-hidden="true">💌</span>
+            <p id="letterModalKicker">Para Yenni</p>
+            <h3 id="letterModalTitle">Carta</h3>
+            <div class="letter-message" id="letterModalMessage"></div>
+            <strong id="letterModalSignature">Lener ♥</strong>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="final-section section">
+      <div class="reveal">
+        <p>Todo esto es solo una pequena parte de cuanto te amo.</p>
+        <h2>Lener ♥ Yenni</h2>
+        <span>Continuara...</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts/main.js"></script>
 </body>
 
 </html>
